@@ -15,4 +15,12 @@ rm -rf /etc/default/dropbear
 mv dropbear /etc/default/dropbear
 /etc/init.d/dropbear restart
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
-netstat -tulpn
+netstat -tulpn 
+printf "Username = "
+read username 
+printf "Password = "
+read password
+useradd $username
+(echo $password;echo $password)| passwd $username
+ip=$(curl -s https://api.ipify.org)
+printf "Ip       : $ip \nUserName : $username \nPassword : $password \nPort : 444,222\n"
