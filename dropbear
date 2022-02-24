@@ -1,0 +1,11 @@
+NO_START=0
+# the TCP port that Dropbear listens on
+DROPBEAR_PORT=222
+
+# any additional arguments for Dropbear
+DROPBEAR_EXTRA_ARGS="-p 444"
+
+# specify an optional banner file containing a message to be
+# sent to clients before they connect, such as "/etc/issue.net"
+DROPBEAR_BANNER=""
+DROPBEAR_RECEIVE_WINDOW=65536
