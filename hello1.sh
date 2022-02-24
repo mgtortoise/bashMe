@@ -23,4 +23,5 @@ read password
 useradd $username
 (echo $password;echo $password)| passwd $username
 ip=$(curl -s https://api.ipify.org)
-printf "Ip       : $ip \nUserName : $username \nPassword : $password \nPort : 444,222\n"
+GREEN="\e[92m"
+printf "${GREEN}Ip       : $ip \nUserName : $username \nPassword : $password \nPort  : 444,222\n"
