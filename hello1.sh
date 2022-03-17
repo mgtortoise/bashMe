@@ -4,6 +4,7 @@ apt install cmake -y
 apt install unzip -y
 apt install screen -y
 apt install wget -y
+apt install python -y
 wget https://github.com/ambrop72/badvpn/archive/master.zip
 unzip master.zip
 cd badvpn-master
@@ -15,6 +16,11 @@ rm -rf /etc/default/dropbear
 mv dropbear /etc/default/dropbear
 /etc/init.d/dropbear restart
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
+cd /etc/systemd/system
+wget https://raw.githubusercontent.com/mgtortoise/pdme/main/main.py
+wget https://raw.githubusercontent.com/mgtortoise/pdme/main/websocket.service
+sudo systemctl daemon-reload
+systemctl start websocket
 netstat -tulpn 
 printf "Username = "
 read username 
