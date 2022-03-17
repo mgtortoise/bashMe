@@ -19,6 +19,7 @@ screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 cd /etc/systemd/system
 wget https://raw.githubusercontent.com/mgtortoise/pdme/main/main.py
 wget https://raw.githubusercontent.com/mgtortoise/pdme/main/websocket.service
+cd $HOME
 sudo systemctl daemon-reload
 systemctl start websocket
 netstat -tulpn 
