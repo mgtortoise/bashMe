@@ -18,7 +18,7 @@ mv dropbear /etc/default/dropbear
 /etc/init.d/dropbear restart
 rm -rf /etc/squid/squid.conf
 mv squid.conf /etc/squid/squid.conf
-systemctl restart squid
+service squid restart
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 netstat -tulpn 
 printf "Username = "
