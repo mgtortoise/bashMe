@@ -1,7 +1,6 @@
 NO_START=0
 # the TCP port that Dropbear listens on
-DROPBEAR_PORT=222
-
+DROPBEAR_PORT=80
 # any additional arguments for Dropbear
 DROPBEAR_EXTRA_ARGS="-p 444"
 
